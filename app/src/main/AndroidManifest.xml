@@ -29,6 +29,11 @@
         <activity
             android:name=".SearchMahasiswaActivity">
         </activity>
+        <activity android:name=".ListMahasiswaActivity">
+        </activity>
+        <activity
+            android:name=".EditMahasiswaActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

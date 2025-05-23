@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText edtJurusan;
     private ProgressBar progressBar;
     private Button btnAdd;
-    private Button btnListData;
+    private Button btnSearchData, btnListData;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,10 +37,15 @@ public class MainActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         btnAdd = findViewById(R.id.btnAdd);
         btnListData = findViewById(R.id.btnList);
+        btnSearchData = findViewById(R.id.btnSearch);
         btnAdd.setOnClickListener(view -> {
             addDataMahasiswa();
         });
-        btnListData.setOnClickListener(view -> {
+        btnListData.setOnClickListener(view ->{
+            Intent intent = new Intent(MainActivity.this, ListMahasiswaActivity.class);
+            startActivity(intent);
+        });
+        btnSearchData.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, SearchMahasiswaActivity.class);
             startActivity(intent);
         });
